@@ -2,32 +2,35 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Sidebar from './components/sidebar'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import College from './elements/college'
+import Work from './elements/work'  
+import Life from './elements/life'
+import Chores from './elements/chores'
+import Date from './components/date'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <div className="main flex gap-4">
+            <Sidebar />
+            <div className='flex flex-col gap-2 mt-10'>
+              <Date />
+              <hr className='text-gray-400 w-[500px]'/>
+              <Routes>
+                <Route path='/' element={<Life />}></Route>
+                <Route path='/college' element={<College />}></Route>
+                <Route path='/work' element={<Work />}></Route>
+                <Route path='/chores' element={<Chores />}></Route>
+              </Routes>
+            </div>
+
+            
+          
+        </div>    
+      </BrowserRouter>  
     </>
   )
 }

@@ -11,4 +11,9 @@ This is a powerful, clean and dynamic Todo app built as part of the **React Chak
 - Built using React functional components and hooks
 
 ## Built By
-Mrinal Agrawal (@Mrinal-Agrawal21) as part of the React Chakravuyh under the guidance of WebGuru - Abhimanyu
+Mrinal Agrawal (@Mrinal-Agrawal21)
+
+##Start Guide
+1.Clone this project
+2.Go to terminal -> npm i -> npm run dev
+<img width="1919" height="916" alt="image" src="https://github.com/user-attachments/assets/f9633677-122d-42a2-b62c-e54580a13ba0" />
